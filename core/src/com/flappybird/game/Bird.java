@@ -24,10 +24,15 @@ public class Bird {
     }
 
     public void update() {
-        if (Gdx.input.isKeyPressed(Input.Keys.SPACE)){
+        if (Gdx.input.isKeyPressed(Input.Keys.SPACE)) {
             vy = 10;
         }
         vy += gravity;
         position.y += vy;
+    }
+
+    public void recreate() {
+        position = new Vector2(100, 300);
+        vy = 0;
     }
 }
